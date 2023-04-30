@@ -1,1 +1,1 @@
-# Study-WIth-GPT
+# Study-With-GPT
