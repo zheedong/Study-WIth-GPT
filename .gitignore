@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 
 
-.open_ai_api.json
+.openai_api_key.json
 .DS_Store
