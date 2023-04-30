@@ -161,3 +161,4 @@ cython_debug/
 
 
 .open_ai_api.json
+.DS_Store
