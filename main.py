@@ -5,7 +5,7 @@ from time import time
 
 openai.api_key = json.load(open(".openai_api_key.json"))["key"]
 
-PDF_FILE_PATH = "./data/sample1.pdf"
+PDF_FILE_PATH = "./data/sample4.pdf"
 doc = fitz.open(PDF_FILE_PATH)
 for page in doc:
     text = page.get_text()
@@ -15,10 +15,10 @@ f = open(f"summary/test_{time()}.md", "w")
 
 for page in doc:
     response = openai.Completion.create(
-        engine="davinci",
-        prompt="Summarise following text and give some additional examples and translate it into Korean in markdown format:\n" + page.get_text(),
+        engine="text-davinci-003",
+        prompt="Summarise following text in markdown format:\n" + page.get_text(), # TODO : max tokens?
         temperature=0.3,
-        max_tokens=60,
+        max_tokens=2049,
         top_p=1.0,
         frequency_penalty=0.0,
         presence_penalty=0.0,
