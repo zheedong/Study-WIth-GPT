@@ -161,4 +161,4 @@ cython_debug/
 
 
 .openai_api_key.json
-.DS_Store/
+*.DS_Store
